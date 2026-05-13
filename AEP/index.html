@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <html data-theme="corporate"></html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AEP</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <div class="navbar bg-base-80 shadow-sm">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="-1"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          >
+            <li><a>Carona</a></li>
+            <li>
+              <a>Carona</a>
+              <ul class="p-2">
+                <li><a>Submenu 1</a></li>
+                <li><a>Submenu 2</a></li>
+              </ul>
+            </li>
+            <li><a>Item 3</a></li>
+          </ul>
+        </div>
+        <a class="btn btn-ghost btn-lg text-4xl font-bold">👍 ShareCar</a>
+      </div>
+
+      
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a>Home</a></li>
+          <li>
+            <details>
+              <summary>Caronas</summary>
+              <ul class="p-2 bg-base-100 w-40 z-1">
+                <li><a>Consultar Caronas</a></li>
+                <li><a>Oferecer Caronas</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a>Sobre</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <a class="btn btn-primary">Oferecer Carona</a>
+      </div>
+      <div style="padding: 10px"></div>
+      <div class="dropdown dropdown-end">
+        <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+          <div class="w-10 rounded-full">
+            <img
+              alt="Tailwind CSS Navbar component"
+              src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+            />
+          </div>
+        </div>
+        <ul
+          tabindex="-1"
+          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+        >
+          <li>
+            <a class="justify-between">
+              Perfil
+              <span class="badge">Novo</span>
+            </a>
+          </li>
+          <li><a>Configurações</a></li>
+          <li><a>Sair</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hero bg-base-200 min-h-screen" style="margin-top: 20px;">
+      <div class="hero-content flex-col lg:flex-row-reverse">
+        <img
+            src="https://www.portaldotransito.com.br/wp-content/uploads/2022/11/carona-solidaria.jpg"
+            class="max-w-2xl rounded-lg shadow-2xl"
+        />
+        <div>
+          <h1 class="text-5xl font-bold">Ir ou levar? Com carona inteligente, você economiza sempre.</h1>
+          <p class="py-6">
+            
+          </p>
+          <button class="btn btn-primary btn-lg px-5 py-3 fs-4">Consultar Caronas</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="join">
+      <div>
+        <div>
+          <input class="input join-item" placeholder="Saindo de" />
+        </div>
+      </div>
+      <div>
+        <div>
+          <input class="input join-item" placeholder="Indo para" />
+        </div>
+      </div>
+      <label class="input">
+        <input type="date" />
+      </label>
+      </select>
+      <div class="indicator">
+        <span class="indicator-item badge badge-secondary">new</span>
+        <button class="btn join-item">Search</button>
+      </div>
+    </div>
+
+    <footer
+      class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10"
+    >
+      <nav>
+        <h6 class="footer-title">Serviços</h6>
+        <a class="link link-hover">Consultar Caronas</a>
+        <a class="link link-hover">Oferecer Carona</a>
+        <a class="link link-hover">Visualizar Motorista</a>
+        <a class="link link-hover">Seu Perfil</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Companhia</h6>
+        <a class="link link-hover">Sobre Nós</a>
+        <a class="link link-hover">Contato</a>
+        <a class="link link-hover">Trabalho</a>
+        <a class="link link-hover">Segurança</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Termos Legais</h6>
+        <a class="link link-hover">Termos de uso</a>
+        <a class="link link-hover">Política de Privacidade</a>
+        <a class="link link-hover">Política de Cookies</a>
+      </nav>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

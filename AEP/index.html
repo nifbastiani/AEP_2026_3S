@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AEP</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
@@ -20,6 +20,7 @@
   </head>
 
   <body>
+  
     <div class="navbar bg-base-80 shadow-sm">
       <div class="navbar-start">
         <div class="dropdown">
@@ -43,21 +44,20 @@
             tabindex="-1"
             class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li><a>Carona</a></li>
+            <li><a>Home</a></li>
             <li>
-              <a>Carona</a>
+              <a>Caronas</a>
               <ul class="p-2">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
+                <li><a href="consultar.html" target="_self">Consultar Caronas</a></li>
+                <li><a href="oferecer.html" target="_self">Oferecer Caronas</a></li>
               </ul>
             </li>
-            <li><a>Item 3</a></li>
+            <li><a>Sobre</a></li>
           </ul>
         </div>
         <a class="btn btn-ghost btn-lg text-4xl font-bold">👍 ShareCar</a>
       </div>
 
-      
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
           <li><a>Home</a></li>
@@ -65,8 +65,8 @@
             <details>
               <summary>Caronas</summary>
               <ul class="p-2 bg-base-100 w-40 z-1">
-                <li><a>Consultar Caronas</a></li>
-                <li><a>Oferecer Caronas</a></li>
+                <li><a href="consultar.html" target="_self">Consultar Caronas</a></li>
+                <li><a href="oferecer.html" target="_self">Oferecer Caronas</a></li>
               </ul>
             </details>
           </li>
@@ -74,7 +74,7 @@
         </ul>
       </div>
       <div class="navbar-end">
-        <a class="btn btn-primary">Oferecer Carona</a>
+        <a class="btn btn-primary" href="oferecer.html" target="_self">Oferecer Carona</a>
       </div>
       <div style="padding: 10px"></div>
       <div class="dropdown dropdown-end">
@@ -82,7 +82,7 @@
           <div class="w-10 rounded-full">
             <img
               alt="Tailwind CSS Navbar component"
-              src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+              src="https://img.freepik.com/vetores-gratis/circulos-de-utilizadores-definidos_78370-4704.jpg?semt=ais_hybrid&w=740&q=80"
             />
           </div>
         </div>
@@ -101,8 +101,7 @@
         </ul>
       </div>
     </div>
-
-    <div class="hero bg-base-200 min-h-screen" style="margin-top: 20px;">
+    <div class="hero bg-base-200 min-h-[60vh]" style="margin-top: 20px;">
       <div class="hero-content flex-col lg:flex-row-reverse">
         <img
             src="https://www.portaldotransito.com.br/wp-content/uploads/2022/11/carona-solidaria.jpg"
@@ -113,34 +112,146 @@
           <p class="py-6">
             
           </p>
-          <button class="btn btn-primary btn-lg px-5 py-3 fs-4">Consultar Caronas</button>
+          <button class="btn btn-primary btn-lg px-5 py-3 fs-4" onclick="window.location.href='consultar.html'" target="_self">Consultar Caronas</button>
         </div>
       </div>
     </div>
+
+
+
 
     <div class="join">
-      <div>
-        <div>
-          <input class="input join-item" placeholder="Saindo de" />
+      <input class="input input-sm join-item text-lg h-10 w-40" placeholder="Saindo de"/>
+
+      <input class="input input-sm join-item text-lg h-10 w-40" placeholder="Indo para" />
+
+      <input type="date" class="input join-item" />
+
+      <button class="btn btn-sm join-item text-lg h-10 px-6" style="background-color: #0082CE; color: white;">Procurar</button>
+    </div>
+    
+
+ 
+    <div class="carousel w-[100%] space-x-4" style="padding: 20px; margin-left: 20px; margin-right: 20px;">
+
+      <div class="carousel-item">
+        <div class="card bg-base-100 w-96 shadow-sm">
+            <figure class="h-48 overflow-hidden">
+              <img
+                src="https://noticias.uem.br/images/2018/2018/2018/fachada_reitoria_uem_1_1.jpg"
+                alt="UEM"
+                class="w-full h-full object-cover" />
+            </figure>
+            
+            <div class="card-body">
+              <h2 class="card-title">UEM</h2>
+              <p>Saindo de: UEM <br> 
+                 Indo para: Avenida Center</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Ir</button>
+              </div>
+            </div>
         </div>
       </div>
-      <div>
-        <div>
-          <input class="input join-item" placeholder="Indo para" />
+      
+      <div class="carousel-item">
+        <div class="card bg-base-100 w-96 shadow-sm">
+            <figure class="h-48 overflow-hidden">
+              <img
+                src="https://azmagazine.com.br/wp-content/uploads/2025/02/Untitled-1-7.jpg"
+                alt="Unicesumar" 
+                class="w-full h-full object-cover" />
+            </figure>
+            
+            <div class="card-body">
+              <h2 class="card-title">UniCesumar</h2>
+              <p>Saindo de: Unicesumar <br> 
+                 Indo para: Terminal</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Ir</button>
+              </div>
+            </div>
         </div>
       </div>
-      <label class="input">
-        <input type="date" />
-      </label>
-      </select>
-      <div class="indicator">
-        <span class="indicator-item badge badge-secondary">new</span>
-        <button class="btn join-item">Search</button>
+      
+      <div class="carousel-item">
+        <div class="card bg-base-100 w-96 shadow-sm">
+            <figure class="h-48 overflow-hidden">
+              <img
+                src="https://assets.ofertorio.com/39/68ad33311d05a779adc9925842e52286.jpg"
+                alt="Catedral" 
+                class="w-full h-full object-cover" />
+            </figure>
+            
+            <div class="card-body">
+              <h2 class="card-title">Catedral</h2>
+              <p>Saindo de: Catedral <br> 
+                 Indo para: Parque do Japão</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Ir</button>
+              </div>
+            </div>
+        </div>
       </div>
+
+      <div class="carousel-item">
+        <div class="card bg-base-100 w-96 shadow-sm">
+            <figure class="h-48 overflow-hidden">
+              <img
+                src="https://azmagazine.com.br/wp-content/uploads/2020/07/Foto-02-3.jpg"
+                alt="Farroupilha" 
+                class="w-full h-full object-cover"/>
+            </figure>
+            
+            <div class="card-body">
+              <h2 class="card-title">Farroupilha</h2>
+              <p>Saindo de: Praça Farroupilha <br> 
+                 Indo para: UEM</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Ir</button>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="card bg-base-100 w-96 shadow-sm">
+            <figure class="h-48 overflow-hidden">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Est%C3%A1dio_Regional_Willie_Davids.jpg"
+                alt="Shoes" 
+                class="w-full h-full object-cover"/>
+            </figure>
+            
+            <div class="card-body">
+              <h2 class="card-title">Willie Davids</h2>
+              <p>Saindo de: Willie Davids <br> 
+                 Indo para: Zona 4</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Ir</button>
+              </div>
+            </div>
+        </div>
+      </div>
+      <br>
+</div>
+
+    <div id="card-carona">
+        <span class="text-rotate text-7xl fast-rotate">
+        <span class="justify-items-center">
+          <span>OFERECER</span>
+          <span>CARONA</span>
+        </span>
+        </span>
+        <div id="texto">
+          <p>Oferecer carona é uma forma prática de transformar trajetos do dia a dia em experiências mais econômicas, sustentáveis e conectadas. Além de reduzir gastos com combustível e trânsito, você contribui para diminuir a emissão de poluentes e ajuda outras pessoas a se locomoverem pela cidade com mais facilidade e segurança.</p>
+        </div>
+        <button class="btn btn-sm join-item text-lg h-10 px-6">Oferecer Carona</button>
     </div>
 
+
     <footer
-      class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10"
+      class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10" style="justify-content: space-around;"
     >
       <nav>
         <h6 class="footer-title">Serviços</h6>
@@ -164,6 +275,7 @@
       </nav>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="script.js"></script>
   </body>
-</html>
+</html> 

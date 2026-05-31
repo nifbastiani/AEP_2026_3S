@@ -24,18 +24,14 @@ body {
   transition: background-color 0.5s;
 }
 
-.item:hover{
-  border-color: #0082CE;
-  box-shadow: #0082CE 0px 0px 10px;
-  background-color: #e3f4ff;
-  transition: background-color 0.5s;  
+.carousel-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.carousel-item:hover{
-  border-color: #0082CE;
-  box-shadow: #0082CE 0px 0px 10px;
-  background-color: #e3f4ff;
-  transition: background-color 0.5s;
+.carousel-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  background-color: #f9f9f9;
 }
 
 .input.join-item{
@@ -123,9 +119,19 @@ option, select{
   color: #0082CE;
   border-color: #0082CE;
   outline-color: #0082CE;
+  width: 100%;
 }
 
 option, select:focus-visible {
   border-color: #0082CE;
   border-radius: 50px;
+}
+
+.informacoes {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
 }

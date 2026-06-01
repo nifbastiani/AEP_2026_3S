@@ -135,3 +135,9 @@ option, select:focus-visible {
   gap: 10px;
   padding: 20px;
 }
+
+.input:focus {
+  border-color: #3b82f6 !important;
+  outline-color: #3b82f6 !important;
+}
+

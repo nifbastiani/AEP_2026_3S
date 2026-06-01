@@ -1,7 +1,7 @@
 // LISTA DE USUÁRIOS -------------------------------------------------------------------------------------
 
 
-const usuario = [
+let usuario = [
   {
     id: 1,
     nome: "Milton",
@@ -40,10 +40,8 @@ const usuario = [
 
 // LISTA DE CARONAS -------------------------------------------------------------------------------------
 
-
 const carona = [
   {
-    id: 1,
     qtdPassageiro: 2,
     origem: "Terminal Intermodal",
     destino: "Unicesumar",
@@ -54,7 +52,6 @@ const carona = [
   },
 
   {
-    id: 2,
     qtdPassageiro: 3,
     origem: "Unicesumar",
     destino: "Terminal Intermodal",
@@ -65,7 +62,6 @@ const carona = [
   },
 
   {
-    id: 3,
     qtdPassageiro: 1,
     origem: "UEM",
     destino: "Avenida Center",
@@ -76,7 +72,6 @@ const carona = [
   },
 
   {
-    id: 4,
     qtdPassageiro: 4,
     origem: "Catedral",
     destino: "Parque do Japão",
@@ -87,7 +82,6 @@ const carona = [
   },
 
   {
-    id: 5,
     qtdPassageiro: 2,
     origem: "Praça Farroupilha", 
     destino: "UEM",
@@ -98,7 +92,6 @@ const carona = [
   },
 
   {
-    id: 6,
     qtdPassageiro: 3,
     origem: "Willie Davids",
     destino: "Zona 4",
@@ -110,11 +103,10 @@ const carona = [
 ];
 
 
-
 // LISTA DE CARROS -------------------------------------------------------------------------------------
 
 
-const carro = [
+let carro = [
   {
     placa: "ABC1D23",
     marca: "Chevrolet",
@@ -155,7 +147,7 @@ const carro = [
 // LISTA DE ENDEREÇOS -------------------------------------------------------------------------------------
 
 
-const endereco = [
+let endereco = [
   {
     rua: "Rua dos Bobos",
     bairro: "Centro",
@@ -175,92 +167,148 @@ const endereco = [
 
 
 
-// instâncias ------------------------------------------------------------------------------------------------------
-/* const list = document.getElementById('myList'); // Get the target UL element
-carona.forEach(carona => {
-  let li = document.createElement('li');
-  li.textContent = carona.horarioChegada;
-  list.appendChild(li);
-}); */
+// ------------------------------------------------------------------------------------------------------
+/*
+function consultar() {
+  // let tabela = document.getElementById("tabela_corpo");
+  let tabela = document.querySelector('table my-0');
+  for (let obj of carona) {
+    let tr = tabela.insertRow();
+    tr.insertCell().textContent = obj.qtdPassageiro;
+    tr.insertCell().textContent = obj.origem;
+    tr.insertCell().textContent = obj.destino;
+    tr.insertCell().textContent = obj.horarioSaida;
+    tr.insertCell().textContent = obj.horarioChegada;
+    tr.insertCell().textContent = obj.data;
+    tr.insertCell().textContent = obj.preco;
+  } 
+}
 
-/*const tableBody = document.querySelector('#userTable tbody');
-let htmlString = '';
+/*
+function consultar() {
+  const tabelaCorpo = document.getElementById("tabela_corpo");
 
-caronas.forEach(carona => {
-  htmlString += `<tr> 
-        <td> ${carona.qtdPassageiro} </td>
-        <td> ${carona.origem} </td>
-        <td> ${carona.destino} </td>
-        <td> ${carona.horarioSaida} </td>
-        <td> ${carona.horarioChegada} </td>        
-        <td> ${carona.data} </td>
-        <td> ${carona.preco} </td>
-  </tr>`;
-});
+  for (const obj of carona) {
+    const tr = document.createElement('tr');
+    const content = `
+    <td> ${ obj.qtdPassageiro } </td>
+    <td> ${ obj.origem } </td>
+    <td> ${ obj.destino } </td>
+    <td> ${ obj.horarioSaida } </td>
+    <td> ${ obj.horarioChegada } </td>
+    <td> ${ obj.data } </td>
+    <td> ${ obj.preco } </td>`; 
 
-tableBody.innerHTML = htmlString;
-*/
+    tr.innerHTML = content;
+    tableBody.appendChild(tr);
+  }
+} */
+
+
 
 
 /*
-function generateHTML(carona) {
-  let html = `
-    <table>
-      <tr>
-        <th> Qtd Passageiro </th>
-        <th> Origem </th>
-        <th> Destino </th>
-        <th> Horário de Saída </th>
-        <th> Horário de Chegada </th>
-        <th> Data </th>
-        <th> Preço </th>
-      </tr>
-  `;
+const temp_carona = [  {
+    qtdPassageiro: 2,
+    origem: "Terminal Intermodal",
+    destino: "Unicesumar",
+    horarioSaida: "07:10",
+    horarioChegada: "07:45",
+    data: "20/07/2026",
+    preco: 30,
+  },
+];
 
-  caronas.forEach(carona => {
-    html += `
-      <tr> 
-        <td> ${carona.qtdPassageiro} </td>
-        <td> ${carona.origem} </td>
-        <td> ${carona.destino} </td>
-        <td> ${carona.horarioSaida} </td>
-        <td> ${carona.horarioChegada} </td>        
-        <td> ${carona.data} </td>
-        <td> ${carona.preco} </td>
-      </tr>
-    `;
-  });
 
-  html += "</table>";
-  return html;
-};
+function consultar_temp() {
+  const tabelaVerificar = document.getElementById("tabela_verificar");
 
-document.getElementById("testeteste").innerHTML = generateHTML(carona);
+  for (const obj of temp_carona) {
+    const tr = document.createElement('tr');
+    const content = `
+    <td> ${ obj.qtdPassageiro } </td>
+    <td> ${ obj.origem } </td>
+    <td> ${ obj.destino } </td>
+    <td> ${ obj.horarioSaida } </td>
+    <td> ${ obj.horarioChegada } </td>
+    <td> ${ obj.data } </td>
+    <td> ${ obj.preco } </td>`; 
+
+    tr.innerHTML = content;
+    tabelaVerificar.appendChild(tr);
+    console.log("teste ");
+  }
+}
 */
 
-let tabela = document.querySelector(".my-0");
-for (let obj of carona) {
-  let tr = tabela.insertRow();
-  tr.insertCell().textContent = obj.qtdPassageiro;
-  tr.insertCell().textContent = obj.origem;
-  tr.insertCell().textContent = obj.destino;
-  tr.insertCell().textContent = obj.horarioSaida;
-  tr.insertCell().textContent = obj.horarioChegada;
-  tr.insertCell().textContent = obj.data;
-  tr.insertCell().textContent = obj.preco;
+// -------------------------------------------------------------------------------------------------------------------------------
+
+
+function consultar() {
+  const tabelaCorpo = document.getElementById("tabela_corpo");
+
+  for (const obj of carona) {
+    const tr = document.createElement('tr');
+    const content = `
+    <td> ${ obj.qtdPassageiro } </td>
+    <td> ${ obj.origem } </td>
+    <td> ${ obj.destino } </td>
+    <td> ${ obj.horarioSaida } </td>
+    <td> ${ obj.horarioChegada } </td>
+    <td> ${ obj.data } </td>
+    <td> ${ obj.preco } </td>`; 
+
+    tr.innerHTML = content;
+    tabelaCorpo.appendChild(tr);
+    console.log("teste ");
+  }
 }
 
-// https://www.reddit.com/r/learnjavascript/comments/w1abee/need_help_to_display_array_into_a_tablehtml/
-// https://stackoverflow.com/questions/65289629/how-to-insert-values-of-objects-in-array-into-html-table-with-javascript
+// consultar();
+
+
+function adicionar_carona() {
+  // carona
+  const carona_data = document.getElementById("carona_data").value;
+  const carona_origem_local = document.getElementById("carona_origem_local").value.trim();
+  const carona_origem_horario_saida = document.getElementById("carona_origem_horario_saida").value;
+  const carona_destino_local = document.getElementById("carona_destino_local").value.trim();
+  const carona_destino_horario_chegada = document.getElementById("carona_destino_horario_chegada").value;
+  const carona_qtd_passageiro = document.getElementById("carona_qtd_passageiro").value.trim();
+  const carona_preco = document.getElementById("carona_preco").value.trim();
+
+  // carro
+  const carona_carro_placa = document.getElementById("carona_carro_placa").value;
+  const carona_carro_marca = document.getElementById("carona_carro_marca").value;
+  const carona_carro_cor = document.getElementById("carona_carro_cor").value;
+  const carona_carro_modelo = document.getElementById("carona_carro_modelo").value;
+
+  if ((carona_origem_local && carona_destino_local && carona_carro_placa && carona_carro_modelo) !== "" ) {
+    const nova_carona = {
+      qtdPassageiro: carona_qtd_passageiro,
+      origem: carona_origem_local,
+      destino: carona_destino_local,
+      horarioSaida: carona_origem_horario_saida,
+      horarioChegada: carona_destino_horario_chegada,
+      data: carona_data,
+      preco: carona_preco,
+    }
+
+    console.log(carona_qtd_passageiro);
+  
+
+    carona.push(nova_carona);
+    consultar();
+  } else {
+    alert("Campos inválidos.");
+  }
 
 
 
-// OFERECER CARONA ---------------------------------------------------------------------------------------------------------------------
-
-const 
 
 
 
+}
 
 
-
+//  href="oferecer_confirmar.html" target="_self"

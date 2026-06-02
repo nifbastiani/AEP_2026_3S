@@ -107,40 +107,62 @@
       </div>
     </div>
 
-    <div class="join">
-      <input class="input input-sm join-item text-lg h-10 w-40" placeholder="Saindo de"/>
-      <input class="input input-sm join-item text-lg h-10 w-40" placeholder="Indo para" />
-      <input type="date" class="input join-item" />
-      <button class="btn btn-sm join-item text-lg h-10 px-6" style="background-color: #0082CE; color: white;">Procurar</button>
+
+<div class="carona-card">
+  <div class="cabecalho">
+    <div class="horario">
+      <h2>11h45 ⟷ 12h</h2>
+      <p>UniCesumar → Terminal</p>     
     </div>
-
-
-<br>
-
-
-
-    <div>
-     <table id="tabela_corpo" class="table my-0">
-      <thead>
-      <tr>
-        <th> Qtd Passageiro </th>
-        <th> Origem </th>
-        <th> Destino </th>
-        <th> Horário de Saída </th>
-        <th> Horário de Chegada </th>
-        <th> Data </th>
-        <th> Preço </th>
-        <th> Reservas </th>
-      </tr>
-      </thead>
-      <tbody>
-      </tbody>
-     </table>
+    
+    <div class="motorista">
+      <img src="https://img.freepik.com/vetores-gratis/circulos-de-utilizadores-definidos_78370-4704.jpg?semt=ais_hybrid&w=740&q=80" alt="Motorista" style="width: 50px; height: 50px;">
+      <div class="info-motorista">
+        <h3>Milton</h3>
+        <div class="rating">
+          <input type="radio" name="rating-1" class="mask mask-star w-3 h-3" />
+          <input type="radio" name="rating-1" class="mask mask-star w-3 h-3" />
+          <input type="radio" name="rating-1" class="mask mask-star w-3 h-3" />
+          <input type="radio" name="rating-1" class="mask mask-star w-3 h-3" checked />
+          <input type="radio" name="rating-1" class="mask mask-star w-3 h-3" />
+        </div>
+      </div>
     </div>
+  </div> 
+  <div class="info-carro" style="display: flex; align-items: center; justify-content: center;">
+    <img src="https://blog-cnm.s3.sa-east-1.amazonaws.com/2024/04/design-sem-nome-1-2.png" alt="carro" class="mask mask-squircle" style="width: 60%; margin-left: -70px;">
+    <div class="carro" style="display: flex; flex-direction: column; padding: 30px; justify-content: center;">
+        <h3><strong>Modelo:</strong> Celta</h3>
+        <h3><strong>Cor:</strong> Prata</h3>
+        <h3><strong>Placa:</strong> ######</h3>
+    </div>
+  </div>
+  <div class="preco">
+    <button class="btn btn-primary">
+          R$ 20,00
+    </button> 
+  </div>
 
+</div>          
 
+<div class="passageiro-card">
+    <div class="horario">
+      <h2>PASSAGEIROS</h2>
+      <p>UniCesumar → Terminal</div>
+    
+    <div class="passageiro-perfil" style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
+      <img src="https://img.freepik.com/vetores-gratis/circulos-de-utilizadores-definidos_78370-4704.jpg?semt=ais_hybrid&w=740&q=80" alt="Motorista" style="width: 50px; height: 50px;">
+      <h3>Apollo</h3>
 
-<br><br><br><br><br>
+      <img src="https://img.freepik.com/vetores-gratis/circulos-de-utilizadores-definidos_78370-4704.jpg?semt=ais_hybrid&w=740&q=80" alt="" style="width: 50px; height: 50px;">
+      <h3>Nicole</h3>
+    </div>
+  </div>
+
+    <button class="btn btn-primary btn-lg px-5 py-3 fs-4"  target="_self">Fazer Pedido de Reserva</button>
+  </div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <footer
       class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10" style="justify-content: space-around;"

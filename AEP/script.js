@@ -9,7 +9,7 @@ let usuario = [
     dataNascimento: "18/12/2005",
     username: "milton",
     telefone: "44 77777-7777",
-    senha: "12345678",
+    senha: "123",
     email: "milton@gmail.com",
   },
 
@@ -20,7 +20,7 @@ let usuario = [
     dataNascimento: "01/09/2007",
     username: "nicole",
     telefone: "44 88888-8888",
-    senha: "87654321",
+    senha: "123",
     email: "nicole@email.com",
   },
 
@@ -31,7 +31,7 @@ let usuario = [
     dataNascimento: "03/07/2004",
     username: "apollo",
     telefone: "44 99999-9999",
-    senha: "123456",
+    senha: "123",
     email: "apollo@email.com",
   },
 
@@ -257,11 +257,11 @@ function consultar() {
     <td> ${ obj.horarioChegada } </td>
     <td> ${ obj.data } </td>
     <td> ${ obj.preco } </td>
-    <td> <button class="btn btn-sm join-item text-lg h-10 px-6"    style="background-color: #0082CE; color: white;"> Ver </button> </td>`;
+    <td> <a href="consultar_detalhado.html" target="_self">
+    <button class="btn btn-sm join-item text-lg h-10 px-6" onclick="ver_detalhado(this)"   style="background-color: #0082CE; color: white;"> Ver </button> </a> </td>`;
 
     tr.innerHTML = content;
     tabelaCorpo.appendChild(tr);
-    console.log("teste ");
   }
 }
 
@@ -284,7 +284,7 @@ function adicionar_carona() {
   const carona_carro_cor = document.getElementById("carona_carro_cor").value;
   const carona_carro_modelo = document.getElementById("carona_carro_modelo").value;
 
-  if ((carona_origem_local && carona_destino_local && carona_carro_placa && carona_carro_modelo) !== "" ) {
+  if ((carona_data && carona_origem_local && carona_destino_local && carona_carro_placa && carona_carro_modelo) !== "" ) {
     const nova_carona = {
       qtdPassageiro: carona_qtd_passageiro,
       origem: carona_origem_local,
@@ -295,16 +295,18 @@ function adicionar_carona() {
       preco: carona_preco,
     }
 
-    console.log(carona_qtd_passageiro);
-  
 
     carona.push(nova_carona);
-    consultar();
+    alert("Carona oferecida com sucesso!");
   } else {
     alert("Campos inválidos.");
   }
+}
 
 
+//  href="oferecer_confirmar.html" target="_self"
+
+function ver_detalhado(button) {
 
 
 
@@ -312,4 +314,22 @@ function adicionar_carona() {
 }
 
 
-//  href="oferecer_confirmar.html" target="_self"
+function login() {
+  const input_usuario = document.getElementById("usuario").value.trim();
+  const input_senha = document.getElementById("senha").value.trim();
+  let verifica = false;
+
+  for (const item of usuario) {
+    if (item.email == input_usuario && item.senha == input_senha) {
+      verifica = true;
+      console.log("logado");
+    }
+console.log("asdasda");
+
+  }
+
+
+}
+
+
+

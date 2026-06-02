@@ -138,11 +138,11 @@
         <form>
             <h1>Login</h1>
             <div class="input-box">
-                <input type="email" placeholder="Usuário">
+                <input id="usuario" type="email" placeholder="Usuário">
                 <i class="bx bxs-user"></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Senha">
+                <input id="senha" type="password" placeholder="Senha">
                 <i class="bx bxs-lock-alt"></i>
             </div>
             <div class="remember-forgot">
@@ -152,10 +152,8 @@
                 </label>
                 <a href="#">Esqueci senha</a>
             </div>
-            <a href="index.html" target="_self">
-                <button class="login" type="submit">Login</button>
-            </a>
-            
+            <button class="login" onclick="login()"> Login </button> 
+                
             <div class="register-link">
                 <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
             </div>

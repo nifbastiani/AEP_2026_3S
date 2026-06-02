@@ -256,7 +256,8 @@ function consultar() {
     <td> ${ obj.horarioSaida } </td>
     <td> ${ obj.horarioChegada } </td>
     <td> ${ obj.data } </td>
-    <td> ${ obj.preco } </td>`; 
+    <td> ${ obj.preco } </td>
+    <td> <button class="btn btn-sm join-item text-lg h-10 px-6"    style="background-color: #0082CE; color: white;"> Ver </button> </td>`;
 
     tr.innerHTML = content;
     tabelaCorpo.appendChild(tr);
@@ -264,7 +265,7 @@ function consultar() {
   }
 }
 
-// consultar();
+consultar();
 
 
 function adicionar_carona() {

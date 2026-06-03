@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <html data-theme="corporate"></html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AEP</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+  
+    <div class="navbar bg-base-80 shadow-sm">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="-1"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          >
+            <li><a href="index.html" target="_self">Home</a></li>
+            <li>
+              <a>Caronas</a>
+              <ul class="p-2">
+                <li><a href="consultar.html" target="_self">Consultar Caronas</a></li>
+                <li><a href="oferecer.html" target="_self">Oferecer Caronas</a></li>
+              </ul>
+            </li>
+            <li><a>Sobre</a></li>
+          </ul>
+        </div>
+        <a href="index.html" target="_self" class="btn btn-ghost hover:bg-transparent normal-case btn-lg flex items-center gap-1 px-5">
+            <img src="img/joia.png" alt="ShareCar" class="w-20 h-20 object-contain scale-[1.8]">
+            <span class="text-4xl font-bold">
+                Share<span style="color: #0c52e1;">Car</span>
+            </span>
+        </a>
+      </div>
+
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a href="index.html" target="_self">Home</a></li>
+          <li>
+            <details>
+              <summary>Caronas</summary>
+              <ul class="p-2 bg-base-100 w-40 z-1">
+                <li><a href="consultar.html" target="_self">Consultar Caronas</a></li>
+                <li><a href="oferecer.html" target="_self">Oferecer Caronas</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="sobre.html" target="_self">Sobre</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end"> 
+      <div style="padding: 10px"></div>
+      <div class="dropdown dropdown-end">
+        <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+          <div class="w-10 rounded-full">
+            <img
+              alt="Tailwind CSS Navbar component"
+              src="https://img.freepik.com/vetores-gratis/circulos-de-utilizadores-definidos_78370-4704.jpg?semt=ais_hybrid&w=740&q=80"
+            />
+          </div>
+        </div>
+        <ul
+          tabindex="-1"
+          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+        >
+          <li>
+            <a href="login.html" class="justify-between">
+              Perfil
+              <span class="badge">Login</span>
+            </a>
+          </li>
+          <li><a>Configurações</a></li>
+          <li><a>Sair</a></li>
+        </ul>
+      </div>
+    </div>
+    </div>
+
+
+
+
+
+    <div id="card-carona">
+        <span class="text-rotate text-7xl fast-rotate">
+        <span class="justify-items-center">
+          <span>OFERECER</span>
+          <span>CARONA</span>
+        </span>
+        </span>
+        <div id="texto">
+          <p>Oferecer carona é uma forma prática de transformar trajetos do dia a dia em experiências mais econômicas, sustentáveis e conectadas. Além de reduzir gastos com combustível e trânsito, você contribui para diminuir a emissão de poluentes e ajuda outras pessoas a se locomoverem pela cidade com mais facilidade e segurança.</p>
+        </div>
+    </div>
+
+<div class="informacoes">
+  <fieldset class="fieldset bg-base-200 border-base-300 rounded-box border p-4 flex-1 min-w-0" style="min-width: 300px;">
+
+    <h1 class="text-2xl font-bold mb-6 text-primary">
+      Informações sobre a CARONA
+    </h1>
+    
+    <label class="label" for="carona_data"> DATA da carona: </label>
+    <input type="date" class="input join-item" id="carona_data"/>
+
+    <label class="label" for="carona_origem_local"> Endereço de SAÍDA da origem: </label>
+      <textarea type="text" class="textarea textarea-primary" id="carona_origem_local" style="width: 100%;"></textarea>
+
+    <label class="label" for="carona_origem_horario_saida"> Horário de SAÍDA da origem: </label>
+      <select class="select select-md" name="carona_origem_horario_saida" id="carona_origem_horario_saida">
+        <option value="13:00"> 13:00 </option>
+        <option value="13:15"> 13:15 </option>
+        <option value="13:30"> 13:30 </option>
+        <option value="13:45"> 13:45 </option>
+        <option value="14:00"> 14:00 </option>
+        <option value="14:15"> 14:15 </option>
+        <option value="14:30"> 14:30 </option>
+        <option value="14:45"> 14:45 </option>
+        <option value="15:00"> 15:00 </option>
+        <option value="15:15"> 15:15 </option>
+        <option value="15:30"> 15:30 </option>
+        <option value="15:45"> 15:45 </option>
+        <option value="16:00"> 16:00 </option>
+        <option value="16:15"> 16:15 </option>
+        <option value="16:30"> 16:30 </option>
+        <option value="16:45"> 16:45 </option>
+        <option value="17:00"> 17:00 </option>
+        <option value="17:15"> 17:15 </option>
+        <option value="17:30"> 17:30 </option>
+        <option value="17:45"> 17:45 </option>
+        <option value="18:00"> 18:00 </option>
+        <option value="18:15"> 18:15 </option>
+        <option value="18:30"> 18:30 </option>
+        <option value="18:45"> 18:45 </option>
+        <option value="19:00"> 19:00 </option>
+        <option value="19:15"> 19:15 </option>
+        <option value="19:30"> 19:30 </option>
+        <option value="19:45"> 19:45 </option>
+        <option value="20:00"> 20:00 </option>
+        <option value="20:15"> 20:15 </option>
+        <option value="20:30"> 20:30 </option>
+        <option value="20:45"> 20:45 </option>
+        <option value="21:00"> 21:00 </option>
+        <option value="21:15"> 21:15 </option>
+        <option value="21:30"> 21:30 </option>
+        <option value="21:45"> 21:45 </option>
+        <option value="22:00"> 22:00 </option>
+        <option value="22:15"> 22:15 </option>
+        <option value="22:30"> 22:30 </option>
+        <option value="22:45"> 22:45 </option>
+        <option value="23:00"> 23:00 </option>
+        <option value="23:15"> 23:15 </option>
+        <option value="23:30"> 23:30 </option>
+        <option value="23:45"> 23:45 </option>
+        <option value="00:00"> 00:00 </option>
+        <option value="00:15"> 00:15 </option>
+        <option value="00:30"> 00:30 </option>
+        <option value="00:45"> 00:45 </option>
+        <option value="01:00"> 01:00 </option>
+        <option value="01:15"> 01:15 </option>
+        <option value="01:30"> 01:30 </option>
+        <option value="01:45"> 01:45 </option>
+        <option value="02:00"> 02:00 </option>
+        <option value="02:15"> 02:15 </option>
+        <option value="02:30"> 02:30 </option>
+        <option value="02:45"> 02:45 </option>
+        <option value="03:00"> 03:00 </option>
+        <option value="03:15"> 03:15 </option>
+        <option value="03:30"> 03:30 </option>
+        <option value="03:45"> 03:45 </option>
+        <option value="04:00"> 04:00 </option>
+        <option value="04:15"> 04:15 </option>
+        <option value="04:30"> 04:30 </option>
+        <option value="04:45"> 04:45 </option>
+        <option value="05:00"> 05:00 </option>
+        <option value="05:15"> 05:15 </option>
+        <option value="05:30"> 05:30 </option>
+        <option value="05:45"> 05:45 </option>
+        <option value="06:00"> 06:00 </option>
+        <option value="06:15"> 06:15 </option>
+        <option value="06:30"> 06:30 </option>
+        <option value="06:45"> 06:45 </option>
+        <option value="07:00"> 07:00 </option>
+        <option value="07:15"> 07:15 </option>
+        <option value="07:30"> 07:30 </option>
+        <option value="07:45"> 07:45 </option>
+        <option value="08:00"> 08:00 </option>
+        <option value="08:15"> 08:15 </option>
+        <option value="08:30"> 08:30 </option>
+        <option value="08:45"> 08:45 </option>
+        <option value="09:00"> 09:00 </option>
+        <option value="09:15"> 09:15 </option>
+        <option value="09:30"> 09:30 </option>
+        <option value="09:45"> 09:45 </option>
+        <option value="10:00"> 10:00 </option>
+        <option value="10:15"> 10:15 </option>
+        <option value="10:30"> 10:30 </option>
+        <option value="10:45"> 10:45 </option>
+        <option value="11:00"> 11:00 </option>
+        <option value="11:15"> 11:15 </option>
+        <option value="11:30"> 11:30 </option>
+        <option value="11:45"> 11:45 </option>
+        <option value="12:00"> 12:00 </option>
+        <option value="12:15"> 12:15 </option>
+        <option value="12:30"> 12:30 </option>
+        <option value="12:45"> 12:45 </option>
+      </select>
+
+    <label class="label" for="carona_destino_local"> Endereço de CHEGADA no destino: </label>
+      <textarea type="text" class="textarea textarea-primary" id="carona_destino_local" style="width: 100%;"></textarea>
+           
+    <label class="label" for="carona_destino_horario_chegada"> Horário de CHEGADA no destino: </label>
+      <select class="select select-md" name="carona_destino_horario_chegada" id="carona_destino_horario_chegada">
+        <option value="13:00"> 13:00 </option>
+        <option value="13:15"> 13:15 </option>
+        <option value="13:30"> 13:30 </option>
+        <option value="13:45"> 13:45 </option>
+        <option value="14:00"> 14:00 </option>
+        <option value="14:15"> 14:15 </option>
+        <option value="14:30"> 14:30 </option>
+        <option value="14:45"> 14:45 </option>
+        <option value="15:00"> 15:00 </option>
+        <option value="15:15"> 15:15 </option>
+        <option value="15:30"> 15:30 </option>
+        <option value="15:45"> 15:45 </option>
+        <option value="16:00"> 16:00 </option>
+        <option value="16:15"> 16:15 </option>
+        <option value="16:30"> 16:30 </option>
+        <option value="16:45"> 16:45 </option>
+        <option value="17:00"> 17:00 </option>
+        <option value="17:15"> 17:15 </option>
+        <option value="17:30"> 17:30 </option>
+        <option value="17:45"> 17:45 </option>
+        <option value="18:00"> 18:00 </option>
+        <option value="18:15"> 18:15 </option>
+        <option value="18:30"> 18:30 </option>
+        <option value="18:45"> 18:45 </option>
+        <option value="19:00"> 19:00 </option>
+        <option value="19:15"> 19:15 </option>
+        <option value="19:30"> 19:30 </option>
+        <option value="19:45"> 19:45 </option>
+        <option value="20:00"> 20:00 </option>
+        <option value="20:15"> 20:15 </option>
+        <option value="20:30"> 20:30 </option>
+        <option value="20:45"> 20:45 </option>
+        <option value="21:00"> 21:00 </option>
+        <option value="21:15"> 21:15 </option>
+        <option value="21:30"> 21:30 </option>
+        <option value="21:45"> 21:45 </option>
+        <option value="22:00"> 22:00 </option>
+        <option value="22:15"> 22:15 </option>
+        <option value="22:30"> 22:30 </option>
+        <option value="22:45"> 22:45 </option>
+        <option value="23:00"> 23:00 </option>
+        <option value="23:15"> 23:15 </option>
+        <option value="23:30"> 23:30 </option>
+        <option value="23:45"> 23:45 </option>
+        <option value="00:00"> 00:00 </option>
+        <option value="00:15"> 00:15 </option>
+        <option value="00:30"> 00:30 </option>
+        <option value="00:45"> 00:45 </option>
+        <option value="01:00"> 01:00 </option>
+        <option value="01:15"> 01:15 </option>
+        <option value="01:30"> 01:30 </option>
+        <option value="01:45"> 01:45 </option>
+        <option value="02:00"> 02:00 </option>
+        <option value="02:15"> 02:15 </option>
+        <option value="02:30"> 02:30 </option>
+        <option value="02:45"> 02:45 </option>
+        <option value="03:00"> 03:00 </option>
+        <option value="03:15"> 03:15 </option>
+        <option value="03:30"> 03:30 </option>
+        <option value="03:45"> 03:45 </option>
+        <option value="04:00"> 04:00 </option>
+        <option value="04:15"> 04:15 </option>
+        <option value="04:30"> 04:30 </option>
+        <option value="04:45"> 04:45 </option>
+        <option value="05:00"> 05:00 </option>
+        <option value="05:15"> 05:15 </option>
+        <option value="05:30"> 05:30 </option>
+        <option value="05:45"> 05:45 </option>
+        <option value="06:00"> 06:00 </option>
+        <option value="06:15"> 06:15 </option>
+        <option value="06:30"> 06:30 </option>
+        <option value="06:45"> 06:45 </option>
+        <option value="07:00"> 07:00 </option>
+        <option value="07:15"> 07:15 </option>
+        <option value="07:30"> 07:30 </option>
+        <option value="07:45"> 07:45 </option>
+        <option value="08:00"> 08:00 </option>
+        <option value="08:15"> 08:15 </option>
+        <option value="08:30"> 08:30 </option>
+        <option value="08:45"> 08:45 </option>
+        <option value="09:00"> 09:00 </option>
+        <option value="09:15"> 09:15 </option>
+        <option value="09:30"> 09:30 </option>
+        <option value="09:45"> 09:45 </option>
+        <option value="10:00"> 10:00 </option>
+        <option value="10:15"> 10:15 </option>
+        <option value="10:30"> 10:30 </option>
+        <option value="10:45"> 10:45 </option>
+        <option value="11:00"> 11:00 </option>
+        <option value="11:15"> 11:15 </option>
+        <option value="11:30"> 11:30 </option>
+        <option value="11:45"> 11:45 </option>
+        <option value="12:00"> 12:00 </option>
+        <option value="12:15"> 12:15 </option>
+        <option value="12:30"> 12:30 </option>
+        <option value="12:45"> 12:45 </option>
+      </select>
+
+    <label class="label" for="carona_qtd_passageiro"> Quantidade de PASSAGEIROS que você pode levar: </label>
+      <select class="select select-md" name="carona_qtd_passageiro" id="carona_qtd_passageiro">
+        <option value="1"> 1 </option>
+        <option value="2"> 2 </option>
+        <option value="3"> 3 </option>
+        <option value="4"> 4 </option>
+      </select>
+
+    <label class="label" for="carona_preco"> VALOR que cada passageiro deverá pagar: </label>
+      <select class="select select-md" name="carona_preco" id="carona_preco">
+        <option value="10"> R$5,00 </option>
+        <option value="10"> R$10,00 </option>
+        <option value="20"> R$20,00 </option>
+        <option value="30"> R$30,00 </option>
+        <option value="40"> R$40,00 </option>
+        <option value="50"> R$50,00 </option>
+      </select>
+    </fieldset>
+
+    <fieldset class="fieldset bg-base-200 border-base-300 rounded-box border p-4 flex-1 min-w-0" style="min-width: 300px;">
+    <h1 class="text-2xl font-bold mb-6 text-primary">
+      Informações sobre o CARRO
+    </h1>
+
+    <label class="label" for="carona_carro_placa"> PLACA do carro: </label>
+    <textarea type="text" class="textarea textarea-primary" id="carona_carro_placa" style="width: 100%;"></textarea>
+
+    <label class="label" for="carona_carro_marca"> MARCA do carro: </label>
+    <select class="select select-md" name="carona_carro_marca" id="carona_carro_marca">
+      <option value="volkswagen"> Volkswagen  </option>
+      <option value="fiat"> Fiat  </option>
+      <option value="chevrolet"> Chevrolet  </option>
+      <option value="hyundai"> Hyundai </option>
+      <option value="toyota"> Toyota  </option>
+      <option value="honda'"> Honda  </option>
+      <option value="jeep"> Jeep </option>
+      <option value="byd"> BYD </option>
+      <option value="outro"> Outro </option>
+    </select>
+
+
+    <label class="label" for="carona_carro_cor"> COR do carro: </label>
+    <select class="select select-md" name="carona_carro_cor" id="carona_carro_cor">
+      <option value="branco"> Branco </option>
+      <option value="preto"> Preto </option>
+      <option value="prata"> Prata </option>
+      <option value="cinza"> Cinza </option>
+      <option value="vermelho"> Vermelho </option>
+      <option value="azul"> Azul </option>
+      <option value="outro"> Outro </option>
+    </select>
+
+    <label class="label" for="carona_carro_modelo"> MODELO do carro: </label>
+    <textarea type="text" class="textarea textarea-primary" id="carona_carro_modelo" style="width: 100%;"></textarea>
+
+
+    <a class="btn btn-primary" onclick="adicionar_carona()"> Próximo </a>
+  </fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+    <footer
+      class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10" style="justify-content: space-around;"
+    >
+      <nav>
+        <h6 class="footer-title">Serviços</h6>
+        <a class="link link-hover"><a href="consultar.html" target="_self">Consultar Caronas</a>
+        <a class="link link-hover"><a href="oferecer.html" target="_self">Oferecer Carona</a>
+        <a class="link link-hover">Visualizar Motorista</a>
+        <a class="link link-hover">Seu Perfil</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Companhia</h6>
+        <a class="link link-hover"><a href="sobre.html" target="_self">Sobre Nós</a>
+        <a class="link link-hover">Contato</a>
+        <a class="link link-hover">Trabalho</a>
+        <a class="link link-hover">Segurança</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Termos Legais</h6>
+        <a class="link link-hover">Termos de uso</a>
+        <a class="link link-hover">Política de Privacidade</a>
+        <a class="link link-hover">Política de Cookies</a>
+      </nav>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="script.js"></script>
+  </body>
+</html> 
